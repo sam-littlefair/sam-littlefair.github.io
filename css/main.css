@@ -702,7 +702,7 @@ html {
 }
 
 .home .scroll-down {
-    position: fixed;
+    position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%) !important;
