@@ -82,4 +82,31 @@ $(function () {
     if (scrollAnim) {
         new WOW().init();
     }
+
+
+
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
 });
+
+function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
+
+function adaptCSSFbBrowser() {
+    if (isFacebookApp()) {
+        document.setTimeout(function(){
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }, 100)
+    }
+  };
+
+  $(document).ready(function() {
+    adaptCSSFbBrowser();
+  });
