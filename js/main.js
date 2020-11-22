@@ -94,13 +94,10 @@ function adaptCSSFbBrowser() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 };
 
-let fbresize;
-if (isFacebookApp()) {
-    fbresize = window.setInterval(function(){
-        adaptCSSFbBrowser();
-    }, 250)
+let resize = window.setInterval(function(){
+    adaptCSSFbBrowser();
+}, 250)
 
-    window.setTimeout(function() {
-        window.clearInterval(fbresize);
-    },10000)
-}
+window.setTimeout(function() {
+    window.clearInterval(fbresize);
+},10000);
