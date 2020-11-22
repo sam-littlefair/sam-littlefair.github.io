@@ -94,10 +94,10 @@ function adaptCSSFbBrowser() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 };
 
-let resize = window.setInterval(function(){
+let resize = setInterval(function(){
     adaptCSSFbBrowser();
 }, 250)
 
-window.setTimeout(function() {
-    window.clearInterval(resize);
+setTimeout(function() {
+    clearInterval(resize);
 },6000);
