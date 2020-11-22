@@ -686,7 +686,7 @@ html {
 }
 
 #deliveroo {
-    width: 60%;
+    width: 45%;
 }
 
 .home .title-block h1 {
@@ -752,7 +752,7 @@ html {
 }
 
 .special {
-    background: url(../img/bg3.png) no-repeat center center;
+    background: url(../img/bg4.png) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1022,7 +1022,7 @@ html {
     box-shadow: none
 }
 
-.features {
+.taco-feature {
     background: url(../img/bg3.png) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1030,6 +1030,16 @@ html {
     background-size: cover;
     padding-bottom: 50px
 }
+
+.burger-feature {
+    background: url(../img/bg4.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom: 50px
+}
+
 
 .features img {
     width: 100%;
