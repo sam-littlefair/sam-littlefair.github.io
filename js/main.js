@@ -95,7 +95,7 @@ function adaptCSSFbBrowser() {
 };
 
 let fbresize;
-if (isFacebookApp() || true) {
+if (isFacebookApp()) {
     fbresize = window.setInterval(function(){
         adaptCSSFbBrowser();
     }, 250)
