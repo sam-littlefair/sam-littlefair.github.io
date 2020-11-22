@@ -99,5 +99,5 @@ let resize = window.setInterval(function(){
 }, 250)
 
 window.setTimeout(function() {
-    window.clearInterval(fbresize);
-},10000);
+    window.clearInterval(resize);
+},6000);
