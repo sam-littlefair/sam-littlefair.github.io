@@ -702,10 +702,10 @@ html {
 }
 
 .home .scroll-down {
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     -webkit-filter: drop-shadow(0px 0px 75px #000);
     filter: drop-shadow(0px 0px 75px #000);
 }
@@ -3283,6 +3283,9 @@ article p {
 
     p {
         font-size: 20px !important;
+    }
+
+    .footer p {
         word-break: break-all
     }
 }

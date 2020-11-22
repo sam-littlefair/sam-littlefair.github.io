@@ -37,7 +37,7 @@ $(window).load(function() {
     $(".scroll-down").css("opacity", "0");
     setTimeout(function() {
         $.Velocity.RunSequence(homeInSequence);
-    }, 250);
+    }, 200);
     $(".scroll-down a").click(function() {
         $(".menu").velocity("scroll", scroll.o);
     });
