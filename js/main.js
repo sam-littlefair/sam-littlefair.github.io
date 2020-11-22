@@ -84,3 +84,23 @@ $(function () {
     }
 });
 
+function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
+
+function adaptCSSFbBrowser() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+
+let fbresize;
+if (isFacebookApp() || true) {
+    fbresize = window.setInterval(function(){
+        adaptCSSFbBrowser();
+    }, 250)
+
+    window.setTimeout(function() {
+        window.clearInterval(fbresize);
+    },10000)
+}

@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(window).bind("load", function() {
     "use strict";
     var fadeOutPreloder = {
         p: {
@@ -36,20 +36,10 @@ $(window).load(function() {
     $(".logo").css("opacity", "0");
     $(".scroll-down").css("opacity", "0");
     setTimeout(function() {
-        if (isFacebookApp()) {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-        setTimeout(function() {
-            $.Velocity.RunSequence(homeInSequence);
-        }, 150);
-    }, 850);
+        $.Velocity.RunSequence(homeInSequence);
+    }, 500);
     $(".scroll-down a").click(function() {
         $(".menu").velocity("scroll", scroll.o);
     });
 });
 
-function isFacebookApp() {
-    var ua = navigator.userAgent || navigator.vendor || window.opera;
-    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
-}
