@@ -16,12 +16,18 @@ $(function () {
             layoutMode: "fitRows",
             filter: defaultFilter,
         });
+        var $footer = $(".menu-footers").isotope({
+            itemSelector: ".menu-footer",
+            layoutMode: "fitRows",
+            filter: defaultFilter,
+        });
         $(".menu-tags").on("click", "span", function () {
             $(".menu-tags span").removeClass("tagsort-active");
             $(this).toggleClass("tagsort-active");
             var filterValue = $(this).attr("data-filter");
             $grid.isotope({ filter: filterValue });
             $header.isotope({ filter: filterValue });
+            $footer.isotope({ filter: filterValue });
         });
     }
     if ($(".menu-items2").length) {
