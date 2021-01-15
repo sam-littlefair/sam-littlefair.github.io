@@ -1,4 +1,4 @@
-$(window).bind("load", function() {
+document.addEventListener("DOMContentLoaded", function() {
     "use strict";
     var fadeOutPreloder = {
         p: {
