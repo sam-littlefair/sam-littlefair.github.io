@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
+const logo = document.getElementById("logo-main");
+logo.addEventListener("load", function() {
     "use strict";
     var fadeOutPreloder = {
         p: {

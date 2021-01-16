@@ -710,7 +710,22 @@ html {
     filter: drop-shadow(0px 0px 75px #000);
 }
 
+.deliveroo-footer {
+    color:#00CDBC !important; 
+    font-size: 28px !important;
+}
+
+.opens {
+    text-align: right;
+}
 @media(max-width: 800px) {
+    #deliveroo {
+        width: 80%;
+    }
+    .deliveroo-footer {
+        color:#00CDBC; 
+        font-size: 18px !important;
+    }
     #logo-main {
         width: 75vw;
     }
@@ -3296,6 +3311,11 @@ article p {
 
     .footer p {
         word-break: break-all
+    }
+
+    .deliveroo-footer {
+        color:#00CDBC; 
+        font-size: 24px !important;
     }
 }
 
